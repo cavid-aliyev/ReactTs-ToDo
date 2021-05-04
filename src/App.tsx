@@ -1,9 +1,16 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import TodoForm from './components/TodoForm';
 
 
-function App() {
+const App: React.FC = () => {
   return (
-    <h1>initial</h1>
+    <>
+    <Navbar/>
+    <div className="container">
+       <TodoForm/>
+    </div>
+    </>
   );
 }
 
