@@ -1,18 +1,20 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 
-const Navbar: React.FC = () => {
-    return (
-        <nav className="indigo accent-2">
-        <div className="nav-wrapper">
-          <a href="/" className="brand-logo">React Ts</a>
-
-          <ul className="right hide-on-med-and-down">
-            <li><a href="sass.html">Todo List</a></li>
-            <li><a href="/">About</a></li>
-          </ul>
-        </div>
-      </nav>
-    )
-}
-
-export default Navbar
+export const Navbar: React.FunctionComponent = () => (
+  <nav className="indigo accent-4">
+    <div className="nav-wrapper">
+      <a href="/" className="brand-logo">
+        React Ts
+      </a>
+      <ul className="right hide-on-med-and-down">
+        <li>
+          <NavLink to="/">ToDo List</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+      </ul>
+    </div>
+  </nav>
+)
